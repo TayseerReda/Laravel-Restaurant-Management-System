@@ -31,6 +31,9 @@ Route::get('/view/reservation',[AdminController::class,"view_reservation"])->nam
 Route::get('/chefs',[AdminController::class,"chefs"])->name('chefs');
 Route::post('/upload/chefs',[AdminController::class,"upload_chef"])->name('upload.chefs');
 Route::get('/edit/chef/{id}',[AdminController::class,"editchef"])->name('chef.edit');
+
+Route::post('/update/chef/{id}',[AdminController::class,"updatechef"])->name('chef.update');
+
 Route::get('/delete/chef/{id}',[AdminController::class,"deletechef"])->name('chef.delete');
 Route::post('/add/card/{id}',[HomeController::class,"addtocard"])->name('addtocart');
 Route::get('/show/card/{id}',[HomeController::class,"showcard"])->name('show.card');
